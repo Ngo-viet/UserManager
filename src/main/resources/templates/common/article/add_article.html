@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Article</title>
+    <!-- Vendor CSS Files -->
+    <link rel="stylesheet" type="text/css" th:href="@{/vendor/bootstrap/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/vendor/bootstrap-icons/bootstrap-icons.css}"/>
+
+
+
+
+    <!-- Template Main CSS File -->
+    <link rel="stylesheet" type="text/css" href="http://localhost:8081/css/style.css"/>
+
+</head>
+<body>
+<div th:replace="decorators/admin/header :: header">
+
+</div>
+<div th:replace="decorators/admin/sidebar :: sidebar">
+
+</div>
+
+
+<main id="main" class="main">
+
+    <div class="pagetitle mb-3">
+        <h1>Thêm bài viết</h1>
+    </div><!-- End Page Title -->
+    <section class="section">
+        <div class="row">
+            <div class="col-lg-12">
+
+                <div class="card">
+                    <div class="card-body pt-3 mt-3">
+                        <form class="row mb-3 g-3"  th:action="@{/admin/article/save}" th:object="${articledto}" method="post" enctype="multipart/form-data">
+
+                            <div class="row mb-3">
+                                <label for="name" class="col-sm-2 col-form-label">Tên bài viết</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" th:field="*{name}" id="name" placeholder="Nhập tên đăng nhập">
+                                    <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label for="title" class="col-sm-2 col-form-label"> Tên tiêu đề</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" th:field="*{title}" id="title" placeholder="Nhập mật khẩu">
+                                    <span th:if="${#fields.hasErrors('title')}" th:errors="*{title}"></span>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label for="description" class="col-sm-2 col-form-label">Nội dung</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" th:field="*{description}" id="description" placeholder="Nhập hộp thư">
+                                    <span th:if="${#fields.hasErrors('description')}" th:errors="*{description}"></span>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label for="author_name" class="col-sm-2 col-form-label">Tác giả</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" th:field="*{author_name}" id="author_name" placeholder="Nhập địa chỉ">
+                                    <span th:if="${#fields.hasErrors('author_name')}" th:errors="*{author_name}"></span>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label for="date" class="col-sm-2 col-form-label">Ngày</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" th:field="*{date}" id="date" placeholder="Nhập địa chỉ">
+                                    <span th:if="${#fields.hasErrors('date')}" th:errors="*{date}"></span>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label for="image" class="col-sm-2 col-form-label">Ảnh</label>
+                                <div class="col-sm-10">
+                                    <input type="file" class="form-control" th:field="*{image}" id="image" placeholder="Nhập địa chỉ">
+                                    <span th:if="${#fields.hasErrors('image')}" th:errors="*{image}"></span>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label   class="col-sm-2 col-form-label">Thể loại</label>
+                                <div class="col-sm-10">
+                                    <select class="form-select" name="category_id"   aria-label="Default select example">
+                                        <option selected>Chọn vai trò</option>
+                                        <option th:each="category: ${categories}" th:value="${category.getId()}" th:text="${category.getCategory_name() + ' - ' + category.getCategory_description()}"  ></option>
+
+                                    </select>
+                                </div>
+                            </div>
+
+
+
+                            <div class="row mb-3">
+
+                                <div class="col-sm-12">
+                                    <button type="submit" class="btn btn-primary float-end">Thêm mới</button>
+                                </div>
+                            </div>
+
+                        </form><!-- End General Form Elements -->
+
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </section>
+
+</main><!-- End #main -->
+<div th:replace="decorators/admin/footer :: footer">
+
+</div>
+
+</body>
+</html>
+

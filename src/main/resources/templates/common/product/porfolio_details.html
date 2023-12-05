@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Portfolio Details - Sailor Bootstrap Template</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link rel="stylesheet" type="text/css" th:href="@{/vendor/bootstrap/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/all.min.css}"/>
+
+
+    <link rel="stylesheet" type="text/css" th:href="@{/vendor/bootstrap-icons/bootstrap-icons.css}"/>
+
+    <link rel="stylesheet" type="text/css" th:href="@{/vendor/swiper/swiper-bundle.min.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/vendor/aos/aos.css}"/>
+
+
+    <!-- Template Main CSS File -->
+    <link rel="stylesheet" type="text/css" href="http://localhost:8081/css/main.css"/>
+    <link rel="stylesheet" type="text/css" href="http://localhost:8081/css/product/styleproduct.css"/>
+
+    <!-- =======================================================
+    * Template Name: Sailor - v4.10.0
+    * Template URL: https://bootstrapmade.com/sailor-free-bootstrap-theme/
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
+</head>
+
+<body>
+
+<div th:replace="decorators/user/topbar :: topbar"></div>
+<div th:replace="decorators/user/header :: header"></div>
+
+<main id="main">
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+        <div class="container">
+
+            <div class="row gy-4">
+
+                <div class="col-lg-8">
+                    <div class="portfolio-details-slider swiper">
+                        <div class="swiper-wrapper align-items-center">
+
+                            <div class="swiper-slide swiper-pagination">
+                                <img th:src="@{/imgs/gallery/sanpham5.jpg}" alt="">
+                            </div>
+
+                            <div class="swiper-slide swiper-pagination">
+                                <img th:src="@{/imgs/gallery/sanpham6.jpg}" alt="">
+                            </div>
+
+                            <div class="swiper-slide swiper-pagination">
+                                <img th:src="@{/imgs/gallery/sanpham7.jpg}" alt="">
+                            </div>
+
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="portfolio-info">
+                        <h3>Nước hoa Libre Eau de Parfum Spray</h3>
+                        <h5 style="color: #ffa500">SAINT LAURENT</h5>
+                        <ul>
+                            <li style="color: #ff3425"><h2><strong>2,400,000 VNĐ</strong></h2></li>
+                            <li> Giá hãng: 3,100,000 VNĐ - Tiết kiệm 620,000 VNĐ(-20%)</li>
+                            <li>
+                                Số lượng
+                            </li>
+                            <li>
+                                <div class="d-grid gap-2 d-md-block">
+
+                                    <button class="btn btn-outline-dark btn_size "  type="button">100ml</button>
+                                    <button class="btn btn-outline-dark btn_size" type="button">150ml</button>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="ms-3 mt-3 d-grid gap-2 d-md-block">
+                                    <button style="padding: 10px 15px 10px 15px; background-color:yellow; color: black " class="btn  " type="button">Thêm vào giỏ</button>
+                                    <button style="padding: 10px 30px 10px 30px; background-color:#ff3425; color: white  " class="ms-3 btn    " type="button">Yêu thích</button>
+                                </div>
+                                <div style="width: 100%; margin-top: 5px" class="d-grid gap-2 col-4 mx-auto p-3">
+
+                                    <button class="btn btn-dark" type="button">Mua hàng</button>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="portfolio-description">
+                        <h2>This is an example of portfolio detail</h2>
+                        <p>
+                            Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section><!-- End Portfolio Details Section -->
+
+</main><!-- End #main -->
+
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+<div th:replace="decorators/user/footer :: footer"></div>
+<!-- Vendor JS Files -->
+
+<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+<script th:src="@{/js/main.js}"></script>
+<!-- Template Main JS File -->
+<script th:src="@{/vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
+<script th:src="@{https://unpkg.com/swiper/swiper-bundle.min.js}"></script>
+
+<script th:src="@{/vendor/swiper/swiper-bundle.min.js}"></script>
+
+
+
+</body>
+
+</html>
